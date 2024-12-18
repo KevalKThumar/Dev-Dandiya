@@ -137,9 +137,11 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
     return PopScope(
       canPop: false,
       child: Scaffold(
+        backgroundColor: AppColor.whiteColor,
         appBar: AppBar(
+          
           iconTheme: const IconThemeData(
-            color: AppColor.whiteColor,
+            color: AppColor.blackColor,
           ),
           leading: IconButton(
             onPressed: () {
@@ -164,12 +166,12 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
           title: Text(
             'Dev Dandiya',
             style: myTextStyle(
-              color: AppColor.whiteColor,
+              color: AppColor.blackColor,
               fontWeight: FontWeight.w600,
-              fontSize: 20,
+              fontSize: 25,
             ),
           ),
-          backgroundColor: const Color(0xff5F259E),
+          backgroundColor: AppColor.whiteColor,
           actions: [
             GestureDetector(
               onTap: () {
@@ -181,13 +183,19 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                 );
               },
               child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                      color: AppColor.blackColor,
+                      width: 1.0,
+                    ),
+                    borderRadius: BorderRadius.circular(6)),
                 padding: const EdgeInsets.all(4.0),
                 child: Text(
-                  '$currentYear',
+                  currentYear!,
                   style: myTextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w500,
-                    color: AppColor.whiteColor,
+                    color: AppColor.blackColor,
                   ),
                 ),
               ),
@@ -291,8 +299,8 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                       // liner gradient
                                                       gradient: LinearGradient(
                                                         colors: [
-                                                          Color(0xff5F259E),
-                                                          Color(0xfff5afff)
+                                                          Color(0xffffa89e),
+                                                          Color(0xffFCB4B0)
                                                         ],
                                                         stops: [0, 1],
                                                         begin: Alignment
@@ -321,16 +329,16 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                           decoration:
                                                               BoxDecoration(
                                                             color: const Color(
-                                                                0xff5F259E), // Background color matching CircleAvatar
+                                                                0xffffa89e), // Background color matching CircleAvatar
                                                             shape:
                                                                 BoxShape.circle,
                                                             border: Border.all(
                                                               color: data.studentGender ==
                                                                       'Male'
                                                                   ? const Color(
-                                                                      0xff5F259E)
+                                                                      0xffffa89e)
                                                                   : const Color(
-                                                                      0xfff5afff,
+                                                                      0xffFCB4B0,
                                                                     ), // Border color
                                                               width:
                                                                   4, // Border width
@@ -377,9 +385,9 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                 LinearGradient(
                                                               colors: [
                                                                 Color(
-                                                                    0xff5F259E),
+                                                                    0xffffa89e),
                                                                 Color(
-                                                                    0xfff5afff)
+                                                                    0xffFCB4B0)
                                                               ],
                                                               stops: [0, 1],
                                                               begin: Alignment
@@ -409,7 +417,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                 decoration:
                                                                     BoxDecoration(
                                                                   color: const Color(
-                                                                      0xff5F259E), // Background color matching CircleAvatar
+                                                                      0xffffa89e), // Background color matching CircleAvatar
                                                                   shape: BoxShape
                                                                       .circle,
                                                                   border: Border
@@ -417,9 +425,9 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     color: data.studentGender ==
                                                                             'Male'
                                                                         ? const Color(
-                                                                            0xff5F259E)
+                                                                            0xffffa89e)
                                                                         : const Color(
-                                                                            0xfff5afff,
+                                                                            0xffFCB4B0,
                                                                           ), // Border color
                                                                     width:
                                                                         4, // Border width
@@ -474,7 +482,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     FontWeight
                                                                         .w400,
                                                                 color: const Color(
-                                                                    0xff5F259E),
+                                                                    0xffffa89e),
                                                               ),
                                                             ),
                                                             Text(
@@ -493,7 +501,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             const Divider(
                                                               thickness: 2,
                                                               color: Color(
-                                                                  0xff5f259e),
+                                                                  0xffffa89e),
                                                             ),
                                                           ],
                                                         ),
@@ -522,7 +530,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     FontWeight
                                                                         .w400,
                                                                 color: const Color(
-                                                                    0xff5F259E),
+                                                                    0xffffa89e),
                                                               ),
                                                             ),
                                                             Text(
@@ -541,7 +549,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             const Divider(
                                                               thickness: 2,
                                                               color: Color(
-                                                                  0xff5f259e),
+                                                                  0xffffa89e),
                                                             ),
                                                           ],
                                                         ),
@@ -570,7 +578,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     FontWeight
                                                                         .w400,
                                                                 color: const Color(
-                                                                    0xff5F259E),
+                                                                    0xffffa89e),
                                                               ),
                                                             ),
                                                             Text(
@@ -589,7 +597,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             const Divider(
                                                               thickness: 2,
                                                               color: Color(
-                                                                  0xff5f259e),
+                                                                  0xffffa89e),
                                                             ),
                                                           ],
                                                         ),
@@ -618,7 +626,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     FontWeight
                                                                         .w400,
                                                                 color: const Color(
-                                                                    0xff5F259E),
+                                                                    0xffffa89e),
                                                               ),
                                                             ),
                                                             Text(
@@ -636,7 +644,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             ),
                                                             const Divider(
                                                               color: Color(
-                                                                  0xff5f259e),
+                                                                  0xffffa89e),
                                                               thickness: 2,
                                                             ),
                                                           ],
@@ -673,7 +681,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                           labelStyle:
                                                               myTextStyle(
                                                             color: const Color(
-                                                                0xff5F259E),
+                                                                0xffffa89e),
                                                             fontWeight:
                                                                 FontWeight.w400,
                                                             fontSize: 18,
@@ -683,7 +691,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             borderSide:
                                                                 BorderSide(
                                                               color: Color(
-                                                                  0xff5F259E),
+                                                                  0xffffa89e),
                                                               width: 2,
                                                             ),
                                                           ),
@@ -692,7 +700,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             borderSide:
                                                                 BorderSide(
                                                               color: Color(
-                                                                  0xff5F259E),
+                                                                  0xffffa89e),
                                                               width: 2,
                                                             ),
                                                           ),
@@ -738,7 +746,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                           labelStyle:
                                                               myTextStyle(
                                                             color: const Color(
-                                                                0xff5F259E),
+                                                                0xffffa89e),
                                                             fontWeight:
                                                                 FontWeight.w400,
                                                             fontSize: 18,
@@ -748,7 +756,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             borderSide:
                                                                 BorderSide(
                                                               color: Color(
-                                                                  0xff5F259E),
+                                                                  0xffffa89e),
                                                               width: 2,
                                                             ),
                                                           ),
@@ -757,7 +765,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             borderSide:
                                                                 BorderSide(
                                                               color: Color(
-                                                                  0xff5F259E),
+                                                                  0xffffa89e),
                                                               width: 2,
                                                             ),
                                                           ),
@@ -803,10 +811,10 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     true,
                                                                 iconEnabledColor:
                                                                     const Color(
-                                                                        0xff5f259e),
+                                                                        0xffffa89e),
                                                                 iconDisabledColor:
                                                                     const Color(
-                                                                        0xff5f259e),
+                                                                        0xffffa89e),
                                                                 decoration:
                                                                     InputDecoration(
                                                                   labelText:
@@ -814,7 +822,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                   labelStyle:
                                                                       myTextStyle(
                                                                     color: const Color(
-                                                                        0xff5F259E),
+                                                                        0xffffa89e),
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w400,
@@ -826,7 +834,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     borderSide:
                                                                         BorderSide(
                                                                       color: Color(
-                                                                          0xff5F259E),
+                                                                          0xffffa89e),
                                                                       width: 2,
                                                                     ),
                                                                   ),
@@ -835,7 +843,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     borderSide:
                                                                         BorderSide(
                                                                       color: Color(
-                                                                          0xff5F259E),
+                                                                          0xffffa89e),
                                                                       width: 2,
                                                                     ),
                                                                   ),
@@ -907,7 +915,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                           labelStyle:
                                                               myTextStyle(
                                                             color: const Color(
-                                                                0xff5F259E),
+                                                                0xffffa89e),
                                                             fontWeight:
                                                                 FontWeight.w400,
                                                             fontSize: 18,
@@ -917,7 +925,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             borderSide:
                                                                 BorderSide(
                                                               color: Color(
-                                                                  0xff5F259E),
+                                                                  0xffffa89e),
                                                               width: 2,
                                                             ),
                                                           ),
@@ -926,7 +934,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             borderSide:
                                                                 BorderSide(
                                                               color: Color(
-                                                                  0xff5F259E),
+                                                                  0xffffa89e),
                                                               width: 2,
                                                             ),
                                                           ),
@@ -973,7 +981,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                           BorderRadius.circular(
                                                               4),
                                                       color: const Color(
-                                                          0xff5f259e),
+                                                          0xffffa89e),
                                                     ),
                                                     width:
                                                         MediaQuery.of(context)
@@ -995,6 +1003,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                                     '')) {
                                                           final student =
                                                               Student(
+                                                                "",
                                                             studentName:
                                                                 userNameController
                                                                     .text,
@@ -1029,7 +1038,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                             context,
                                                             'Profile Updated',
                                                             const Color(
-                                                                0xff5F259E),
+                                                                0xffffa89e),
                                                           );
                                                         }
                                                       },
@@ -1158,7 +1167,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                         style: myTextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w500,
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                         ),
                                       ),
                                     ),
@@ -1168,7 +1177,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                           child: RadioListTile<PaymentStatus>(
                                             contentPadding: EdgeInsets.zero,
                                             activeColor:
-                                                const Color(0xff5F259E),
+                                                const Color(0xffffa89e),
                                             title: Text(
                                               'New',
                                               style: myTextStyle(
@@ -1190,7 +1199,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                           child: RadioListTile<PaymentStatus>(
                                             contentPadding: EdgeInsets.zero,
                                             activeColor:
-                                                const Color(0xff5F259E),
+                                                const Color(0xffffa89e),
                                             title: Text(
                                               'Renew',
                                               style: myTextStyle(
@@ -1218,7 +1227,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                         style: myTextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w500,
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                         ),
                                       ),
                                     ),
@@ -1236,7 +1245,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                               ),
                                             ),
                                             activeColor:
-                                                const Color(0xff5F259E),
+                                                const Color(0xffffa89e),
                                             value: PaymentType.Monhlty,
                                             groupValue:
                                                 paymentProvider.paymentType,
@@ -1262,7 +1271,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                             ),
                                             value: PaymentType.Yearly,
                                             activeColor:
-                                                const Color(0xff5F259E),
+                                                const Color(0xffffa89e),
                                             groupValue:
                                                 paymentProvider.paymentType,
                                             onChanged: (value) {
@@ -1284,7 +1293,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                         style: myTextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.w500,
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                         ),
                                       ),
                                     ),
@@ -1303,7 +1312,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                             ),
                                             value: PaymentMethod.Cash,
                                             activeColor:
-                                                const Color(0xff5F259E),
+                                                const Color(0xffffa89e),
                                             groupValue:
                                                 paymentProvider.paymentMethod,
                                             onChanged: (value) {
@@ -1325,7 +1334,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                             ),
                                             value: PaymentMethod.Online,
                                             activeColor:
-                                                const Color(0xff5F259E),
+                                                const Color(0xffffa89e),
                                             groupValue:
                                                 paymentProvider.paymentMethod,
                                             onChanged: (value) {
@@ -1342,7 +1351,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                       child: Text(
                                         'Amount',
                                         style: myTextStyle(
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                           fontSize: 16,
                                           fontWeight: FontWeight.w500,
                                         ),
@@ -1357,7 +1366,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                         controller: amountController,
                                         prefixIcon: const Icon(
                                           Icons.currency_rupee_outlined,
-                                          color: Color(0xff5F259E),
+                                          color: Color(0xffffa89e),
                                         ),
                                         focusNode: amountFocus,
                                         textInputType: TextInputType.number,
@@ -1375,7 +1384,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                               decoration: BoxDecoration(
                                                 borderRadius:
                                                     BorderRadius.circular(4),
-                                                color: const Color(0xff5F259E),
+                                                color: const Color(0xffffa89e),
                                               ),
                                               width: MediaQuery.of(context)
                                                       .size
@@ -1591,7 +1600,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                   color:
-                                                      const Color(0xff5F259E),
+                                                      const Color(0xffffa89e),
                                                 ),
                                               ),
                                             ),
@@ -1602,7 +1611,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                   color:
-                                                      const Color(0xff5F259E),
+                                                      const Color(0xffffa89e),
                                                 ),
                                               ),
                                             ),
@@ -1613,7 +1622,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                   color:
-                                                      const Color(0xff5F259E),
+                                                      const Color(0xffffa89e),
                                                 ),
                                               ),
                                             ),
@@ -1624,7 +1633,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                   color:
-                                                      const Color(0xff5F259E),
+                                                      const Color(0xffffa89e),
                                                 ),
                                               ),
                                             ),
@@ -1635,7 +1644,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                   color:
-                                                      const Color(0xff5F259E),
+                                                      const Color(0xffffa89e),
                                                 ),
                                               ),
                                             ),
@@ -1646,7 +1655,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                                   fontSize: 16,
                                                   fontWeight: FontWeight.w500,
                                                   color:
-                                                      const Color(0xff5F259E),
+                                                      const Color(0xffffa89e),
                                                 ),
                                               ),
                                             ),
@@ -1756,7 +1765,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                                           padding: EdgeInsets.all(8.0),
                                           child: Icon(
                                             Icons.delete,
-                                            color: Color(0xff5F259E),
+                                            color: Color(0xffffa89e),
                                           ),
                                         ),
                                       )
@@ -1786,7 +1795,7 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
           decoration: const BoxDecoration(
             // liner gradient
             gradient: LinearGradient(
-              colors: [Color(0xff5F259E), Color(0xfff5afff)],
+              colors: [Color(0xffffa89e), Color(0xffFCB4B0)],
               stops: [0, 1],
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
@@ -1808,13 +1817,13 @@ class _DisplayUserDetailsState extends State<DisplayUserDetails> {
                 height: 118,
                 decoration: BoxDecoration(
                   color: const Color(
-                      0xff5F259E), // Background color matching CircleAvatar
+                      0xffffa89e), // Background color matching CircleAvatar
                   shape: BoxShape.circle,
                   border: Border.all(
                     color: data.studentGender == 'Male'
-                        ? const Color(0xff5F259E)
+                        ? const Color(0xffffa89e)
                         : const Color(
-                            0xfff5afff,
+                            0xffFCB4B0,
                           ), // Border color
                     width: 4, // Border width
                   ),

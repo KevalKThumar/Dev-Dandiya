@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: AppColor.whiteColor,
       drawer: Drawer(
-        backgroundColor: const Color(0xff5F259E),
+        backgroundColor: const Color(0xffffa89e),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -252,6 +252,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        shape: const CircleBorder(),
         onPressed: () {
           Navigator.push(
             context,
@@ -261,28 +262,25 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           );
         },
-        backgroundColor: const Color(0xff5F259E),
+        backgroundColor: Colors.white,
         child: const Icon(
           Icons.add,
-          color: AppColor.whiteColor,
+          color: AppColor.blackColor,
+          size: 30,
         ),
       ),
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: AppColor.whiteColor,
+          color: AppColor.blackColor,
         ),
         titleSpacing: 0,
         leadingWidth: 45,
         elevation: 0,
-        title: Text(
-          'Dev Dandiya',
-          style: myTextStyle(
-            color: AppColor.whiteColor,
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
-          ),
+        title: Image.asset(
+          'assets/devlogo.png',
+          width: 120,
         ),
-        backgroundColor: const Color(0xff5F259E),
+        backgroundColor: Colors.white,
         actions: [
           GestureDetector(
             onTap: () {
@@ -294,13 +292,19 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: AppColor.blackColor,
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(6)),
               padding: const EdgeInsets.all(4.0),
               child: Text(
                 currentYear!,
                 style: myTextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
-                  color: AppColor.whiteColor,
+                  color: AppColor.blackColor,
                 ),
               ),
             ),
@@ -317,7 +321,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             child: const Icon(
               Icons.search,
-              color: AppColor.whiteColor,
+              color: AppColor.blackColor,
               size: 28.0,
             ),
           ),
@@ -328,7 +332,7 @@ class _HomeScreenState extends State<HomeScreen> {
         builder: (context, homeprovider, _) {
           return RefreshIndicator(
             key: _refreshIndicatorKey,
-            color: const Color(0xff5F259E),
+            color: const Color(0xffffa89e),
             backgroundColor: Colors.transparent,
             strokeWidth: 2,
             triggerMode: RefreshIndicatorTriggerMode.onEdge,
@@ -340,36 +344,54 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 // boy and girl
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: AppColor.whiteColor,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          spreadRadius: 1,
-                          blurRadius: 1,
-                          offset: const Offset(0, 1),
+                SizedBox(
+                  height: 50,
+                  width: width,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      // male box
+                      GestureDetector(
+                        onTap: homeprovider.loadBoyData,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.boy,
+                              color: AppColor.blackColor,
+                              size: 28,
+                            ),
+                            const SizedBox(
+                              width: 8,
+                            ),
+                            Text(
+                              'BOYS - ${homeprovider.boys.length}',
+                              style: GoogleFonts.poppins(
+                                fontSize: 18,
+                                color: AppColor.blackColor,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                      borderRadius: BorderRadius.circular(8.0),
-                    ),
-                    height: 50,
-                    width: width,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        // male box
-                        GestureDetector(
-                          onTap: homeprovider.loadBoyData,
+                      ),
+                      const VerticalDivider(
+                        color: AppColor.blackColor,
+                        thickness: 1,
+                      ),
+                      // female box
+                      Padding(
+                        padding: const EdgeInsets.only(right: 5.0),
+                        child: GestureDetector(
+                          onTap: homeprovider.loadGirlData,
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Icon(
-                                Icons.boy,
+                                Icons.girl,
                                 color: AppColor.blackColor,
                                 size: 28,
                               ),
@@ -377,7 +399,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 width: 8,
                               ),
                               Text(
-                                'BOYS - ${homeprovider.boys.length}',
+                                'GIRLS - ${homeprovider.girls.length}',
                                 style: GoogleFonts.poppins(
                                   fontSize: 18,
                                   color: AppColor.blackColor,
@@ -387,41 +409,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             ],
                           ),
                         ),
-                        const VerticalDivider(
-                          color: AppColor.blackColor,
-                          thickness: 1,
-                        ),
-                        // female box
-                        Padding(
-                          padding: const EdgeInsets.only(right: 5.0),
-                          child: GestureDetector(
-                            onTap: homeprovider.loadGirlData,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Icon(
-                                  Icons.girl,
-                                  color: AppColor.blackColor,
-                                  size: 28,
-                                ),
-                                const SizedBox(
-                                  width: 8,
-                                ),
-                                Text(
-                                  'GIRLS - ${homeprovider.girls.length}',
-                                  style: GoogleFonts.poppins(
-                                    fontSize: 18,
-                                    color: AppColor.blackColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 homeprovider.isLoading
@@ -507,7 +496,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     horizontal: 8, vertical: 4),
                                 padding: const EdgeInsets.all(8.0),
                                 decoration: BoxDecoration(
-                                  color: AppColor.whiteColor,
+                                  color: AppColor.listTileColor,
                                   boxShadow: [
                                     BoxShadow(
                                       color:
@@ -565,48 +554,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     const Spacer(),
                                     Column(
                                       children: [
-                                        SingleChildScrollView(
-                                          scrollDirection: Axis.horizontal,
-                                          child: Row(
-                                            children: [
-                                              GestureDetector(
-                                                onTap: () {
-                                                  sendMessageToWhatsApp(
-                                                    homeprovider.message
-                                                        .data![0].whatsapp
-                                                        .toString(),
-                                                    context,
-                                                    item.studentMobile
-                                                        .toString(),
-                                                  );
-                                                },
-                                                child: const SvgImage(
-                                                    url:
-                                                        "assets/svg/whatsapp.svg",
-                                                    height: 30),
-                                              ),
-                                              const SizedBox(width: 10),
-                                              GestureDetector(
-                                                onTap: () {
-                                                  sendMessageToWhatsApp(
-                                                    homeprovider.message
-                                                        .data![1].whatsapp
-                                                        .toString(),
-                                                    context,
-                                                    item.studentMobile
-                                                        .toString(),
-                                                  );
-                                                },
-                                                child: const SvgImage(
-                                                    url:
-                                                        "assets/svg/message.svg",
-                                                    height: 30),
-                                              ),
-                                              const SizedBox(width: 5),
-                                            ],
-                                          ),
-                                        ),
-                                        const SizedBox(height: 3),
                                         Text(
                                           item.studentCode.toString(),
                                           style: GoogleFonts.poppins(
@@ -615,7 +562,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 .withOpacity(0.6),
                                             fontWeight: FontWeight.w500,
                                           ),
-                                        )
+                                        ),
+                                        const SizedBox(width: 5),
+                                        GestureDetector(
+                                          onTap: () {
+                                            sendMessageToWhatsApp(
+                                              homeprovider
+                                                  .message.data![1].whatsapp
+                                                  .toString(),
+                                              context,
+                                              item.studentMobile.toString(),
+                                            );
+                                          },
+                                          child: const SvgImage(
+                                            url: "assets/svg/message.svg",
+                                            height: 35,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 3),
                                       ],
                                     )
                                   ],

@@ -33,8 +33,8 @@ Widget locationDropDown() {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
         child: DropdownButton<Location>(
-          iconEnabledColor: const Color(0xff5f259e),
-          iconDisabledColor: const Color(0xff5f259e),
+          iconEnabledColor: const Color(0xffffa89e),
+          iconDisabledColor: const Color(0xffffa89e),
           isExpanded: true,
           value: provider.selectedLocation ?? provider.locations.first,
           onChanged: (Location? newValue) {
@@ -51,7 +51,7 @@ Widget locationDropDown() {
                 style: myTextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w400,
-                  color: const Color(0xff5F259E), // Menu item color
+                  color: const Color(0xffffa89e), // Menu item color
                 ),
               ),
             );

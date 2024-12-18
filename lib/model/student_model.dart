@@ -6,8 +6,9 @@ class Student {
   final String studentSession;
   final String studentLocation;
   final String studentProfile;
+  final String? studentDate;
 
-  Student({
+  Student(this.studentDate, {
     required this.studentName,
     required this.studentMobile,
     required this.studentGender,
@@ -15,6 +16,7 @@ class Student {
     required this.studentSession,
     required this.studentLocation,
     required this.studentProfile,
+    
   });
 
   Map<String, dynamic> toJson() {
@@ -25,6 +27,7 @@ class Student {
       'student_code': studentCode,
       'student_session': studentSession,
       'student_location': studentLocation,
+      'student_date': studentDate,
       'student_profile': studentProfile, // file path
     };
   }

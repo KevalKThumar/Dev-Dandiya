@@ -125,7 +125,7 @@ class _EventScreenState extends State<EventScreen> {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        backgroundColor: const Color(0xff5F259E),
+                        backgroundColor: const Color(0xffffa89e),
                         behavior: SnackBarBehavior.floating,
                         margin: const EdgeInsets.all(10),
                         duration: const Duration(seconds: 2),
@@ -136,7 +136,7 @@ class _EventScreenState extends State<EventScreen> {
                   },
                 );
               },
-              backgroundColor: const Color(0xff5F259E),
+              backgroundColor: const Color(0xffffa89e),
               child: const Icon(
                 Icons.delete_rounded,
                 color: AppColor.whiteColor,
@@ -153,7 +153,7 @@ class _EventScreenState extends State<EventScreen> {
                       isUpdate = true;
                     });
                   },
-                  backgroundColor: const Color(0xff5F259E),
+                  backgroundColor: const Color(0xffffa89e),
                   child: const Icon(
                     Icons.edit_rounded,
                     color: AppColor.whiteColor,
@@ -179,7 +179,7 @@ class _EventScreenState extends State<EventScreen> {
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
-                            backgroundColor: const Color(0xff5F259E),
+                            backgroundColor: const Color(0xffffa89e),
                             behavior: SnackBarBehavior.floating,
                             margin: const EdgeInsets.all(10),
                             duration: const Duration(seconds: 2),
@@ -190,7 +190,7 @@ class _EventScreenState extends State<EventScreen> {
                       },
                     );
                   },
-                  backgroundColor: const Color(0xff5F259E),
+                  backgroundColor: const Color(0xffffa89e),
                   child: const Icon(
                     Icons.delete_rounded,
                     color: AppColor.whiteColor,
@@ -225,7 +225,7 @@ class _EventScreenState extends State<EventScreen> {
             fontSize: 20,
           ),
         ),
-        backgroundColor: const Color(0xff5F259E),
+        backgroundColor: const Color(0xffffa89e),
         actions: [
           GestureDetector(
             onTap: () {
@@ -366,13 +366,13 @@ class _EventScreenState extends State<EventScreen> {
                                 ),
                                 hintStyle: myTextStyle(
                                   color:
-                                      const Color(0xff5F259E).withOpacity(0.7),
+                                      const Color(0xffffa89e).withOpacity(0.7),
                                   fontWeight: FontWeight.w400,
                                   fontSize: 16,
                                 ),
                                 hintText: 'Enter your description here...',
                                 filled: true,
-                                fillColor: const Color(0xff5F259E).withOpacity(
+                                fillColor: const Color(0xffffa89e).withOpacity(
                                     0.05), // Slight background tint for text area
                               ),
                               keyboardType: TextInputType.multiline,
@@ -401,7 +401,7 @@ class _EventScreenState extends State<EventScreen> {
                               builder: (context, eventProvider, child) {
                                 return eventProvider.isLoadingInsert == true
                                     ? const CircularProgressIndicator(
-                                        color: Color(0xff5F259E),
+                                        color: Color(0xffffa89e),
                                       )
                                     : Row(
                                         mainAxisAlignment:
@@ -469,7 +469,7 @@ class _EventScreenState extends State<EventScreen> {
                                                       ),
                                                       backgroundColor:
                                                           const Color(
-                                                              0xff5F259E),
+                                                              0xffffa89e),
                                                       behavior: SnackBarBehavior
                                                           .floating,
                                                       margin:
@@ -490,7 +490,7 @@ class _EventScreenState extends State<EventScreen> {
                                               },
                                               style: ElevatedButton.styleFrom(
                                                   backgroundColor:
-                                                      const Color(0xff5F259E),
+                                                      const Color(0xffffa89e),
                                                   shape: RoundedRectangleBorder(
                                                     borderRadius:
                                                         BorderRadius.circular(

@@ -112,7 +112,7 @@ class _SearchScreenState extends State<SearchScreen> {
             fontSize: 20,
           ),
         ),
-        backgroundColor: const Color(0xff5F259E),
+        backgroundColor: const Color(0xffffa89e),
         actions: [
           GestureDetector(
             onTap: () {
@@ -181,11 +181,11 @@ class _SearchScreenState extends State<SearchScreen> {
                                 height: 40,
                                 child: DropdownButtonFormField<String>(
                                   isExpanded: true,
-                                  iconEnabledColor: const Color(0xff5f259e),
-                                  iconDisabledColor: const Color(0xff5f259e),
+                                  iconEnabledColor: const Color(0xffffa89e),
+                                  iconDisabledColor: const Color(0xffffa89e),
                                   decoration: InputDecoration(
                                     filled: true,
-                                    fillColor: const Color(0xff5F259E)
+                                    fillColor: const Color(0xffffa89e)
                                         .withOpacity(0.1),
                                     enabledBorder: const UnderlineInputBorder(
                                       borderSide: BorderSide.none,
@@ -215,7 +215,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                         style: myTextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w400,
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                         ),
                                       ),
                                     );
@@ -233,11 +233,11 @@ class _SearchScreenState extends State<SearchScreen> {
                                 height: 40,
                                 child: DropdownButtonFormField<String>(
                                   isExpanded: true,
-                                  iconEnabledColor: const Color(0xff5f259e),
-                                  iconDisabledColor: const Color(0xff5f259e),
+                                  iconEnabledColor: const Color(0xffffa89e),
+                                  iconDisabledColor: const Color(0xffffa89e),
                                   decoration: InputDecoration(
                                     filled: true,
-                                    fillColor: const Color(0xff5F259E)
+                                    fillColor: const Color(0xffffa89e)
                                         .withOpacity(0.1),
                                     enabledBorder: const UnderlineInputBorder(
                                       borderSide: BorderSide.none,
@@ -266,7 +266,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                         style: myTextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.w400,
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                         ),
                                       ),
                                     );
@@ -329,7 +329,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                   // Show Snack Bar
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xff5F259E),
+                                  backgroundColor: const Color(0xffffa89e),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(4),
                                   ),

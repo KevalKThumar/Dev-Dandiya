@@ -52,7 +52,7 @@ class LoginProvider with ChangeNotifier {
               color: AppColor.whiteColor,
             ),
           ),
-          backgroundColor: const Color(0xff5F259E),
+          backgroundColor: const Color(0xffffa89e),
           duration: const Duration(seconds: 2),
           behavior: SnackBarBehavior.floating,
           margin: const EdgeInsets.all(10),

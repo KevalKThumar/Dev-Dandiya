@@ -89,18 +89,16 @@ class PaymentProvider with ChangeNotifier {
     request.fields['payment_method'] = paymentMethod;
     request.fields['payment_amount'] = paymentAmount;
     request.fields['payment_date'] = paymentDate;
-    log(request.fields.toString());
 
     try {
       final response = await request.send();
       final responseBody = await http.Response.fromStream(response);
 
-      log(responseBody.body);
       final data = json.decode(responseBody.body);
 
       if (response.statusCode == 200) {
         if (data['status'] == 'success') {
-          showSnackBar(context, data['message'], const Color(0xff5F259E));
+          showSnackBar(context, data['message'], const Color(0xffffa89e));
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
@@ -134,7 +132,6 @@ class PaymentProvider with ChangeNotifier {
       if (response.statusCode == 200) {
         final responseData = await response.stream.bytesToString();
         final jsonData = jsonDecode(responseData);
-        log(jsonData.toString());
 
         PaymentListModel paymentList = PaymentListModel.fromJson(jsonData);
         if (paymentList.status == 'success') {
@@ -160,7 +157,6 @@ class PaymentProvider with ChangeNotifier {
     var request = http.MultipartRequest('POST', url);
 
     request.fields['payment_id'] = paymentId;
-    log(request.fields.toString());
 
     try {
       var response = await request.send();
@@ -168,12 +164,11 @@ class PaymentProvider with ChangeNotifier {
       if (response.statusCode == 200) {
         final responseData = await response.stream.bytesToString();
         final jsonData = jsonDecode(responseData);
-        log(jsonData.toString());
 
         if (jsonData['status'] == 'success') {
           _payments
               .removeWhere((payment) => payment.studentPaymentId == paymentId);
-          showSnackBar(context, jsonData['message'], const Color(0xff5F259E));
+          showSnackBar(context, jsonData['message'], const Color(0xffffa89e));
         } else {
           showSnackBar(context, jsonData['message'], Colors.red);
         }
@@ -197,10 +192,7 @@ class PaymentProvider with ChangeNotifier {
 
       if (response.statusCode == 200) {
         final jsonData = jsonDecode(response.body);
-        log(jsonData.toString());
         final data = jsonData['data'].first;
-
-        log(data.toString());
 
         if (jsonData['status'] == 'success') {
           _monthlyPayment = data['monthly_payment'].toString();

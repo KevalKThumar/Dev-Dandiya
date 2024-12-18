@@ -89,7 +89,7 @@ class StudentProvider with ChangeNotifier {
           showSnackBar(
             context,
             responseData['message'] ?? 'Student added successfully',
-            const Color(0xff5F259E),
+            const Color(0xffffa89e),
           );
           initializeData(context);
           Navigator.pop(context);
@@ -136,8 +136,6 @@ class StudentProvider with ChangeNotifier {
       request.fields['student_code'] = code;
       request.fields['student_session'] = student.studentSession;
       request.fields['student_location'] = student.studentLocation;
-
-      log(request.fields.toString());
 
       if (Uri.tryParse(student.studentProfile)?.isAbsolute ?? false) {
         // If the profile is an HTTP URL, download the file
@@ -193,9 +191,7 @@ class StudentProvider with ChangeNotifier {
       // Add the student ID as a form field
       request.fields['student_id'] = studentId;
 
-      // Send the request
-      var response = await request.send();
-      log(jsonDecode(await response.stream.bytesToString())['message']);
+      await request.send();
     } catch (e) {
       showSnackBar(
         context,
@@ -249,7 +245,7 @@ class StudentProvider with ChangeNotifier {
           showSnackBar(
             context,
             responseData['message'] ?? 'Student found successfully',
-            const Color(0xff5F259E),
+            const Color(0xffffa89e),
           );
           searchList = searchModel.data ?? [];
         } else {
@@ -300,7 +296,7 @@ class StudentProvider with ChangeNotifier {
         if (responseData['status'] == 'success') {
           // Handle success, e.g., extracting the student code
           code = responseData['student_code'].toString();
-          log('Code: $code');
+          log(code);
         }
       }
     } catch (e) {

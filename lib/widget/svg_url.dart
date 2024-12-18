@@ -20,7 +20,7 @@ class SvgImage extends StatelessWidget {
         width: 20,
         height: 20,
         child: CircularProgressIndicator(
-          color: Color(0xff5F259E),
+          color: Color(0xffffa89e),
         ),
       ),
       height: height,

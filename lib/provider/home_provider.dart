@@ -116,9 +116,7 @@ class HomeProvider with ChangeNotifier {
 
       // Send the request
       final streamedResponse = await request.send();
-      final response = await http.Response.fromStream(streamedResponse);
-
-      log(jsonDecode(response.body)['message']);
+      await http.Response.fromStream(streamedResponse);
       notifyListeners();
     } catch (e) {
       showSnackBar(context, 'Error occurred: $e', Colors.red);
@@ -128,6 +126,4 @@ class HomeProvider with ChangeNotifier {
   Future<void> refreshData(BuildContext context) async {
     initializeData(context);
   }
-
-
 }

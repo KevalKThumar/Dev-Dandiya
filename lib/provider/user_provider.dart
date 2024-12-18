@@ -49,7 +49,7 @@ class UpdateLoginProvider with ChangeNotifier {
           HomeScreen.adminUsername = loginName;
           prefs.setString('admin_username', loginName);
           prefs.setString('admin_password', loginPassword);
-          showSnackBar(context, _message, const Color(0xff5F259E));
+          showSnackBar(context, _message, const Color(0xffffa89e));
 
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(

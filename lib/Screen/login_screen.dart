@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: MediaQuery.of(context).size.height,
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [Color(0xff5F259E), Color(0xffabecd6)],
+                      colors: [Color(0xffffa89e), Color(0xffabecd6)],
                       stops: [0, 1],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   style: myTextStyle(
                                     fontSize: 30,
                                     fontWeight: FontWeight.bold,
-                                    color: const Color(0xff5F259E),
+                                    color: const Color(0xffffa89e),
                                   ),
                                 ),
                                 const SizedBox(height: 20),
@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   builder: (context, obscureText, child) {
                                     return TextFormField(
                                       style: myTextStyle(
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                           fontSize: 18,
                                           fontWeight: FontWeight.w400),
                                       keyboardType:
@@ -126,11 +126,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                             borderSide: BorderSide.none),
                                         border: const OutlineInputBorder(
                                           borderSide: BorderSide(
-                                              color: Color(0xff5F259E)),
+                                              color: Color(0xffffa89e)),
                                         ),
                                         hintText: 'Password',
                                         hintStyle: myTextStyle(
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                           fontSize: 18,
                                           fontWeight: FontWeight.w400,
                                         ),
@@ -143,7 +143,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                             obscureText
                                                 ? Icons.visibility_off
                                                 : Icons.visibility,
-                                            color: const Color(0xff5F259E),
+                                            color: const Color(0xffffa89e),
                                             size: 22,
                                           ),
                                           onPressed: () {
@@ -152,11 +152,11 @@ class _LoginScreenState extends State<LoginScreen> {
                                           },
                                         ),
                                         filled: true,
-                                        fillColor: const Color(0xff5F259E)
+                                        fillColor: const Color(0xffffa89e)
                                             .withOpacity(0.1),
                                         labelStyle: myTextStyle(
                                           fontSize: 18,
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                           fontWeight: FontWeight.w400,
                                         ),
                                       ),
@@ -182,7 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                           child: CircularProgressIndicator(
                                             valueColor:
                                                 AlwaysStoppedAnimation<Color>(
-                                              Color(0xff5F259E),
+                                              Color(0xffffa89e),
                                             ),
                                           ),
                                         ),
@@ -250,7 +250,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                                       BorderRadius.circular(4),
                                                 ),
                                                 backgroundColor:
-                                                    const Color(0xff5F259E),
+                                                    const Color(0xffffa89e),
                                               ),
                                               child: Text(
                                                 'Login',

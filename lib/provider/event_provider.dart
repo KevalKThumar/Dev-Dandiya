@@ -118,7 +118,7 @@ class EventProvider with ChangeNotifier {
         showSnackBar(
             context,
             eventModel.message ?? 'Event inserted successfully',
-            const Color(0xff5F259E));
+            const Color(0xffffa89e));
         await fetchEvents(context);
       } else {
         showSnackBar(context, eventModel.message ?? 'Failed to insert event',

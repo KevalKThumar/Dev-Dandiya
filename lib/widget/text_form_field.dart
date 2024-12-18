@@ -27,7 +27,7 @@ class AuthField extends StatelessWidget {
       height: 40,
       child:TextFormField(
               style: myTextStyle(
-                  color: const Color(0xff5F259E),
+            color: const Color(0xffffa89e),
                   fontSize: 18,
                   fontWeight: FontWeight.w400),
               keyboardType: textInputType,
@@ -40,20 +40,20 @@ class AuthField extends StatelessWidget {
                 focusedBorder:
                     const OutlineInputBorder(borderSide: BorderSide.none),
                 border: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xff5F259E)),
+            borderSide: BorderSide(color: Color(0xffffa89e)),
                 ),
                 hintText: hintText,
                 hintStyle: myTextStyle(
-                  color: const Color(0xff5F259E),
+            color: const Color(0xffffa89e),
                   fontSize: 18,
                   fontWeight: FontWeight.w400,
                 ),
                 filled: true,
-                fillColor: const Color(0xff5F259E).withOpacity(0.1),
+          fillColor: const Color(0xffffa89e).withOpacity(0.1),
                 prefixIcon: prefixIcon,
                 labelStyle: myTextStyle(
                   fontSize: 18,
-                  color: const Color(0xff5F259E),
+            color: const Color(0xffffa89e),
                   fontWeight: FontWeight.w400,
                 ),
               ),

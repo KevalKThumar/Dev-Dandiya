@@ -45,22 +45,20 @@ class _WhatsAppSettingState extends State<WhatsAppSetting> {
     instructionMessageController.text =
         homeProvider.message.data![1].whatsapp.toString();
     return Scaffold(
+      backgroundColor: AppColor.whiteColor,
       appBar: AppBar(
+
         iconTheme: const IconThemeData(
-          color: AppColor.whiteColor,
+          color: AppColor.blackColor,
         ),
         titleSpacing: 0,
         leadingWidth: 45,
         elevation: 0,
-        title: Text(
-          'Dev Dandiya',
-          style: myTextStyle(
-            color: AppColor.whiteColor,
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
-          ),
+        title: Image.asset(
+          'assets/devlogo.png',
+          width: 120,
         ),
-        backgroundColor: const Color(0xff5F259E),
+        backgroundColor: AppColor.whiteColor,
         actions: [
           GestureDetector(
             onTap: () {
@@ -72,13 +70,19 @@ class _WhatsAppSettingState extends State<WhatsAppSetting> {
               );
             },
             child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: AppColor.blackColor,
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(6)),
               padding: const EdgeInsets.all(4.0),
               child: Text(
-                '$currentYear',
+                currentYear!,
                 style: myTextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
-                  color: AppColor.whiteColor,
+                  color: AppColor.blackColor,
                 ),
               ),
             ),
@@ -144,13 +148,13 @@ class _WhatsAppSettingState extends State<WhatsAppSetting> {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     hintStyle: myTextStyle(
-                      color: const Color(0xff5F259E).withOpacity(0.7),
+                      color: const Color(0xffffa89e).withOpacity(0.7),
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
                     ),
                     hintText: 'Enter your message here...',
                     filled: true,
-                    fillColor: const Color(0xff5F259E).withOpacity(
+                    fillColor: const Color(0xffffa89e).withOpacity(
                         0.05), // Slight background tint for text area
                   ),
                   keyboardType: TextInputType.multiline,
@@ -195,13 +199,13 @@ class _WhatsAppSettingState extends State<WhatsAppSetting> {
                       borderRadius: BorderRadius.circular(4),
                     ),
                     hintStyle: myTextStyle(
-                      color: const Color(0xff5F259E).withOpacity(0.7),
+                      color: const Color(0xffffa89e).withOpacity(0.7),
                       fontWeight: FontWeight.w400,
                       fontSize: 16,
                     ),
                     hintText: 'Enter your message here...',
                     filled: true,
-                    fillColor: const Color(0xff5F259E).withOpacity(
+                    fillColor: const Color(0xffffa89e).withOpacity(
                         0.05), // Slight background tint for text area
                   ),
                   keyboardType: TextInputType.multiline,
@@ -240,7 +244,7 @@ class _WhatsAppSettingState extends State<WhatsAppSetting> {
                             showSnackBar(
                               context,
                               "Messages updated successfully",
-                              const Color(0xff5F259E),
+                              const Color(0xffffa89e),
                             );
                             instructionMessageController.clear();
                             welcomeMessageController.clear();
@@ -268,7 +272,7 @@ class _WhatsAppSettingState extends State<WhatsAppSetting> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(4),
                           ),
-                          backgroundColor: const Color(0xff5F259E),
+                          backgroundColor: const Color(0xffffa89e),
                         ),
                         child: Text(
                           'Submit',

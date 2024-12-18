@@ -107,22 +107,19 @@ class _EventDetailsState extends State<EventDetails> {
         Provider.of<SessionProvider>(context).sessions[1].session;
 
     return Scaffold(
+      backgroundColor: AppColor.whiteColor,
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: AppColor.whiteColor,
+          color: AppColor.blackColor,
         ),
         titleSpacing: 0,
         leadingWidth: 45,
         elevation: 0,
-        title: Text(
-          'Dev Dandiya',
-          style: myTextStyle(
-            color: AppColor.whiteColor,
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
-          ),
+        title: Image.asset(
+          'assets/devlogo.png',
+          width: 120,
         ),
-        backgroundColor: const Color(0xff5F259E),
+        backgroundColor: AppColor.whiteColor,
         actions: [
           GestureDetector(
             onTap: () {
@@ -134,13 +131,19 @@ class _EventDetailsState extends State<EventDetails> {
               );
             },
             child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: AppColor.blackColor,
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(6)),
               padding: const EdgeInsets.all(4.0),
               child: Text(
-                '$currentYear',
+                currentYear!,
                 style: myTextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   fontWeight: FontWeight.w500,
-                  color: AppColor.whiteColor,
+                  color: AppColor.blackColor,
                 ),
               ),
             ),
@@ -157,7 +160,7 @@ class _EventDetailsState extends State<EventDetails> {
             },
             child: const Icon(
               Icons.search,
-              color: AppColor.whiteColor,
+              color: AppColor.blackColor,
               size: 28.0,
             ),
           ),
@@ -183,8 +186,8 @@ class _EventDetailsState extends State<EventDetails> {
                                 _pickImage();
                               },
                               child: DottedBorder(
-                                strokeWidth: 2,
-                                color: const Color(0xff5F259E),
+                                strokeWidth: 3,
+                                color: const Color(0xffffa89e),
                                 dashPattern: const [10, 4],
                                 radius: const Radius.circular(4),
                                 borderType: BorderType.RRect,
@@ -198,14 +201,14 @@ class _EventDetailsState extends State<EventDetails> {
                                       const Icon(
                                         Icons.folder_open,
                                         size: 50,
-                                        color: Color(0xff5F259E),
+                                        color: Color(0xffffa89e),
                                       ),
                                       const SizedBox(height: 15),
                                       Text(
                                         'Select your image',
                                         style: myTextStyle(
                                           fontSize: 17,
-                                          color: const Color(0xff5F259E),
+                                          color: const Color(0xffffa89e),
                                           fontWeight: FontWeight.w500,
                                         ),
                                       ),
@@ -247,13 +250,13 @@ class _EventDetailsState extends State<EventDetails> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           hintStyle: myTextStyle(
-                            color: const Color(0xff5F259E).withOpacity(0.7),
+                            color: const Color(0xffffa89e).withOpacity(0.7),
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
                           hintText: 'Enter your description here...',
                           filled: true,
-                          fillColor: const Color(0xff5F259E).withOpacity(
+                          fillColor: const Color(0xffffa89e).withOpacity(
                               0.05), // Slight background tint for text area
                         ),
                         keyboardType: TextInputType.multiline,
@@ -275,7 +278,7 @@ class _EventDetailsState extends State<EventDetails> {
                         builder: (context, eventProvider, child) {
                           return eventProvider.isLoadingInsert == true
                               ? const CircularProgressIndicator(
-                                  color: Color(0xff5F259E),
+                                  color: Color(0xffffa89e),
                                 )
                               : Row(
                                   mainAxisAlignment:
@@ -301,7 +304,7 @@ class _EventDetailsState extends State<EventDetails> {
                                         },
                                         style: ElevatedButton.styleFrom(
                                             backgroundColor:
-                                                const Color(0xff5F259E),
+                                                const Color(0xffffa89e),
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(4),

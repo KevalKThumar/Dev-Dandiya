@@ -106,20 +106,19 @@ class _EditProfileState extends State<EditProfile> {
         Provider.of<SessionProvider>(context).sessions[1].session;
 
     return Scaffold(
+      backgroundColor: AppColor.whiteColor,
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: AppColor.whiteColor),
+        iconTheme: const IconThemeData(
+          color: AppColor.blackColor,
+        ),
         titleSpacing: 0,
         leadingWidth: 45,
         elevation: 0,
-        title: Text(
-          'Dev Dandiya',
-          style: myTextStyle(
-            color: AppColor.whiteColor,
-            fontWeight: FontWeight.w600,
-            fontSize: 20,
-          ),
+        title: Image.asset(
+          'assets/devlogo.png',
+          width: 120,
         ),
-        backgroundColor: const Color(0xff5F259E),
+        backgroundColor: AppColor.whiteColor,
         actions: [
           GestureDetector(
             onTap: () {
@@ -131,13 +130,19 @@ class _EditProfileState extends State<EditProfile> {
               );
             },
             child: Container(
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: AppColor.blackColor,
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(6)),
               padding: const EdgeInsets.all(4.0),
               child: Text(
-                currentYear!, // Replace with dynamic session year
+                currentYear!,
                 style: myTextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
-                  color: AppColor.whiteColor,
+                  color: AppColor.blackColor,
                 ),
               ),
             ),
@@ -154,7 +159,7 @@ class _EditProfileState extends State<EditProfile> {
             },
             child: const Icon(
               Icons.search,
-              color: AppColor.whiteColor,
+              color: AppColor.blackColor,
               size: 28.0,
             ),
           ),
@@ -193,25 +198,25 @@ class _EditProfileState extends State<EditProfile> {
                         style: myTextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
-                          color: const Color(0xff5F259E),
+                          color: const Color(0xffffa89e),
                         ),
                         controller: usernameController,
                         decoration: InputDecoration(
                           labelText: "Username",
                           labelStyle: myTextStyle(
-                            color: const Color(0xff5F259E),
+                            color: const Color(0xffffa89e),
                             fontWeight: FontWeight.w400,
                             fontSize: 18,
                           ),
                           focusedBorder: const UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xff5F259E),
+                              color: Color(0xffffa89e),
                               width: 2,
                             ),
                           ),
                           enabledBorder: const UnderlineInputBorder(
                             borderSide: BorderSide(
-                              color: Color(0xff5F259E),
+                              color: Color(0xffffa89e),
                               width: 2,
                             ),
                           ),
@@ -238,25 +243,25 @@ class _EditProfileState extends State<EditProfile> {
                             style: myTextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
-                              color: const Color(0xff5F259E),
+                              color: const Color(0xffffa89e),
                             ),
                             controller: passwordController,
                             decoration: InputDecoration(
                               labelText: "Password",
                               labelStyle: myTextStyle(
-                                color: const Color(0xff5F259E),
+                                color: const Color(0xffffa89e),
                                 fontWeight: FontWeight.w400,
                                 fontSize: 18,
                               ),
                               focusedBorder: const UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0xff5F259E),
+                                  color: Color(0xffffa89e),
                                   width: 2,
                                 ),
                               ),
                               enabledBorder: const UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0xff5F259E),
+                                  color: Color(0xffffa89e),
                                   width: 2,
                                 ),
                               ),
@@ -274,7 +279,7 @@ class _EditProfileState extends State<EditProfile> {
                                     obscureText
                                         ? Icons.visibility_off
                                         : Icons.visibility,
-                                    color: const Color(0xff5F259E),
+                                    color: const Color(0xffffa89e),
                                     size: 22,
                                   ),
                                 ),
@@ -303,25 +308,25 @@ class _EditProfileState extends State<EditProfile> {
                             style: myTextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
-                              color: const Color(0xff5F259E),
+                              color: const Color(0xffffa89e),
                             ),
                             controller: confirmPasswordController,
                             decoration: InputDecoration(
                               labelText: "Confirm Password",
                               labelStyle: myTextStyle(
-                                color: const Color(0xff5F259E),
+                                color: const Color(0xffffa89e),
                                 fontWeight: FontWeight.w400,
                                 fontSize: 18,
                               ),
                               focusedBorder: const UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0xff5F259E),
+                                  color: Color(0xffffa89e),
                                   width: 2,
                                 ),
                               ),
                               enabledBorder: const UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                  color: Color(0xff5F259E),
+                                  color: Color(0xffffa89e),
                                   width: 2,
                                 ),
                               ),
@@ -339,7 +344,7 @@ class _EditProfileState extends State<EditProfile> {
                                     obscureText
                                         ? Icons.visibility_off
                                         : Icons.visibility,
-                                    color: const Color(0xff5F259E),
+                                    color: const Color(0xffffa89e),
                                     size: 22,
                                   ),
                                 ),
@@ -367,7 +372,7 @@ class _EditProfileState extends State<EditProfile> {
                           ? const Center(
                               child: SizedBox(
                                 child: CircularProgressIndicator(
-                                  color: Color(0xff5F259E),
+                                  color: Color(0xffffa89e),
                                 ),
                               ),
                             )
@@ -383,7 +388,7 @@ class _EditProfileState extends State<EditProfile> {
                                       _submitForm(context);
                                     },
                                     style: ElevatedButton.styleFrom(
-                                      backgroundColor: const Color(0xff5F259E),
+                                      backgroundColor: const Color(0xffffa89e),
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(4),
                                       ),
